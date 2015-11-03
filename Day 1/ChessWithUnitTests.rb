@@ -1,4 +1,5 @@
 require 'Pry'
+require 'RSpec'
 
 class Board
   def initialize

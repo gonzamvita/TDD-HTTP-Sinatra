@@ -6,27 +6,27 @@ RSpec.describe "Fizzbuzz" do
   end
 
   it "return 1 for 1" do
-  expect(@number.validate(1)).to eq(1)
+    expect(@number.validate(1)).to eq(1)
   end
 
   it "return 2 for 2" do
-  expect(@number.validate(1)).to eq(1)
+    expect(@number.validate(1)).to eq(1)
   end
 
   it "return Fizz for 3" do
-  expect(@number.validate(3)).to eq("Fizz")
+    expect(@number.validate(3)).to eq("Fizz")
   end
 
   it "return number for a number no mod 3 or 5" do
-  expect(@number.validate(4)).to eq(4)
+    expect(@number.validate(4)).to eq(4)
   end
 
   it "return Buzz for 5 " do
-  expect(@number.validate(5)).to eq("Buzz")
+    expect(@number.validate(5)).to eq("Buzz")
   end
 
   it "return FizzBuzz for 15" do
-  expect(@number.validate(15)).to eq("FizzBuzz")
+    expect(@number.validate(15)).to eq("FizzBuzz")
   end
 
   it "return FizzBuzz for a number mod 3 and mod 5" do
