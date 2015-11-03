@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="author.css">
+</head>
+<h1>Welcome Page</h1>
+<%= @greeting %>
+<h2>
+  <b>Author:</b>
+  Izzy Ironside
+</h2>
+<p>
+  The time is <b><%= @thetime.strftime("%H:%M:%S") %></b>
+</p>
+<p>
+    Izzy Ironside was born on
+    <%= Date.today %>
+  </p>
+<% if Date.today.tuesday? %>
+  <p>
+    Izzy Ironside is <strong>NOT</strong>
+    a fan of Mondays like today.
+  </p>
+<% end %>
+<p>My favorite pizza has this ingredients:
+  <ul>
+    <% @ingredients.each do |ingr| %>
+      <li><%= ingr %></li>
+    <% end %>
+  </ul>
+</p>
+<img src="/cool_image.png" alt="A very cool image">
