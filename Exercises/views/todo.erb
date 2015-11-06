@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Todolist</title>
+</head>
+<body>
+<h2>Things to do</h2>
+  <form action="add_task" method="POST">
+    <input type="text" name="username">
+    <input type="submit" name="login" value="Add Task">
+  </form>
+  <ul>
+    <%if @tasks != nil
+        @tasks.each do |task| %>
+    <li><% task.conten %></li>
+    <% end
+    end %>
+  </ul>
+  <form action="logout" method="POST">
+    <input type="submit" name="logout" value="Log out!">
+  </form>
+</body>
+</html>

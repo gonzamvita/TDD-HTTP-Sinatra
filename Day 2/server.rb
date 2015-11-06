@@ -21,3 +21,10 @@ get "/users/:username" do
 
   erb(:user_profile)
 end
+
+get "/hours/ago/:shift" do
+  @shift = params[:shift].to_i
+  @adjusted_datetime = (Time.now - @shift*60*60).to_datetime
+
+  erb(:hours_ago)
+end
